@@ -8,8 +8,8 @@ defmodule Smoke.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Smoke.Server, port: port()},
-      {Smoke.ConnectionSupervisor, []}
+      {Smoke.ConnectionSupervisor, []},
+      {Smoke.Server, port: port()}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
